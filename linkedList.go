@@ -14,8 +14,14 @@ type LinkedList struct{
 }
 
 
-func () addNode(t *Node, v int) int{
-
+func (LinkedList *LinkedList) addNode(v int) int{
+	var node = Node{}
+	node.Value = v
+	if node.nextNode != nil{
+		node.nextNode = LinkedList.headNode
+	}
+	LinkedList.headNode = &node
+	return v
 }
 
 func traverse(t *Node){
@@ -35,17 +41,5 @@ func traverse(t *Node){
 var root = new(Node)
 
 func main()  {
-	fmt.Println(root)
-	root = nil
-	traverse(root)
-	addNode(root, 1)
-	addNode(root, 1)
-	traverse(root)
-	addNode(root, 10)
-	addNode(root, 10)
-	addNode(root, 0)
-	addNode(root, 0)
-	traverse(root)
-	addNode(root, 100)
-	traverse(root)
+
 }
