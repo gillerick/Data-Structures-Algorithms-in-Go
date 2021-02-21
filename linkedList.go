@@ -2,30 +2,20 @@ package Data_Structures___Algorithms
 
 import "fmt"
 
+//Node class
 type Node struct {
 	Value int
 	nextNode *Node
 }
 
+//LinkedList class
+type LinkedList struct{
+	headNode *Node
+}
 
-func addNode(t *Node, v int) int{
-	if root == nil{
-		t = &Node{v, nil}
-		root = t
-		return 0
-	}
 
-	if v == t.Value{
-		fmt.Println("Node already exists:", v)
-		return -1
-	}
+func () addNode(t *Node, v int) int{
 
-	if t.nextNode == nil{
-		t.nextNode = &Node{v, nil}
-		return -2
-	}
-
-	return addNode(t.nextNode, v)
 }
 
 func traverse(t *Node){
