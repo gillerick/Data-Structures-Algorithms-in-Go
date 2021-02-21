@@ -4,7 +4,7 @@ import "fmt"
 
 type Node struct {
 	Value int
-	Next *Node
+	nextNode *Node
 }
 
 
@@ -20,12 +20,12 @@ func addNode(t *Node, v int) int{
 		return -1
 	}
 
-	if t.Next == nil{
-		t.Next = &Node{v, nil}
+	if t.nextNode == nil{
+		t.nextNode = &Node{v, nil}
 		return -2
 	}
 
-	return addNode(t.Next, v)
+	return addNode(t.nextNode, v)
 }
 
 func traverse(t *Node){
@@ -37,7 +37,7 @@ func traverse(t *Node){
 	for t != nil{
 
 		fmt.Printf("%d -> ", t.Value)
-		t =t.Next
+		t =t.nextNode
 	}
 	fmt.Println()
 }
