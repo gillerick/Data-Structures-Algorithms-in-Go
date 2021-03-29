@@ -29,3 +29,17 @@ func (set *Set) ContainsElement(element int) bool{
 	return exists
 
 }
+
+//Returns the set which intersects with another set
+func (set *Set) IntersectionSet(anotherSet *Set)  *Set{
+	var intersectSet = & Set{}
+	intersectSet.New()
+	var value int
+
+	for value, _ = range set.integerMap{
+		if anotherSet.ContainsElement(value){
+			intersectSet.AddElement(value)
+		}
+	}
+	return intersectSet
+}
