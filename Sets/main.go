@@ -16,3 +16,16 @@ func (set *Set) AddElement(element int)  {
 	}
 
 }
+
+//Deletes an element from a set
+func (set *Set) DeleteElement(element int) {
+	delete(set.integerMap, element)
+}
+
+//Checks if a set contains an element
+func (set *Set) ContainsElement(element int) bool{
+	var exists bool
+	_, exists = set.integerMap[element]
+	return exists
+
+}
