@@ -4,9 +4,9 @@ import "fmt"
 
 type Set struct {
 	integerMap map[int]bool
- }
+}
 
- //Create the map of integer and bool
+//Create the map of integer and bool
 func (set *Set) New() {
 	set.integerMap = make(map[int]bool)
 }
@@ -73,7 +73,7 @@ func main()  {
 	set1.AddElement(9)
 	set1.AddElement(1)
 	set1.AddElement(4)
-	
+
 	//Set 2
 	set2 = &Set{}
 	set2.New()
@@ -81,7 +81,7 @@ func main()  {
 	set2.AddElement(4)
 	set2.AddElement(2)
 	set2.AddElement(7)
-	
+
 	//Set 3
 	set3 = &Set{}
 	set3.New()
@@ -89,7 +89,11 @@ func main()  {
 	set3.AddElement(1)
 	set3.AddElement(8)
 	set3.AddElement(9)
-	fmt.Println("Hello Sets")
-	fmt.Println(set1.ContainsElement(9))
+	fmt.Println("Set 1: ", set1)
+	fmt.Println("Set 2: ", set2)
+	fmt.Println("Set 3: ", set3)
+	fmt.Println("Intersect Set 1 & Set 2: ", set1.IntersectionSet(set2))
+	//fmt.Println(set1.ContainsElement
+	fmt.Println("Union Set 1 & Set 2: ", set1.Union(set2))
 
 }
