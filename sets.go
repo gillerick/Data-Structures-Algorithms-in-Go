@@ -100,4 +100,20 @@ func main()  {
 	fmt.Println("Union Set 1 & Set 2: ", set1.Union(set2))
 	fmt.Println(&set3)
 
+	//PostIDs
+	var postIDs *Set
+	postIDs = &Set{}
+	postIDs.New()
+
+	//Testing AddElement from a range
+	ids := [8]int{23, 56, 78, 45, 67, 89, 56, 89}
+	for _, value := range ids{
+		postIDs.AddElement(value)
+
+	}
+
+	fmt.Println("PostIDs Set: ", postIDs)
+
+
+
 }
