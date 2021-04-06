@@ -73,6 +73,9 @@ func main()  {
 	set1.AddElement(9)
 	set1.AddElement(1)
 	set1.AddElement(4)
+	set1.AddElement(6)
+	set1.AddElement(1)
+	set1.AddElement(10)
 
 	//Set 2
 	set2 = &Set{}
@@ -95,5 +98,6 @@ func main()  {
 	fmt.Println("Intersect Set 1 & Set 2: ", set1.IntersectionSet(set2))
 	//fmt.Println(set1.ContainsElement
 	fmt.Println("Union Set 1 & Set 2: ", set1.Union(set2))
+	fmt.Println(&set3)
 
 }

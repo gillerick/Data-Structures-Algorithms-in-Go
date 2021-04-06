@@ -1,4 +1,4 @@
-package Data_Structures___Algorithms
+package main
 
 import "fmt"
 
