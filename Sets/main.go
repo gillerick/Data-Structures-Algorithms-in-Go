@@ -1,4 +1,4 @@
-package Sets
+package main
 
 type Set struct {
 	integerMap map[int]bool
@@ -45,7 +45,6 @@ func (set *Set) IntersectionSet(anotherSet *Set)  *Set{
 }
 
 //Returns a UnionSet that consists of a union between a set and another set
-
 func (set *Set) Union(anotherSet *Set)  *Set{
 	var unionSet = &Set{}
 	unionSet.New()
@@ -58,4 +57,37 @@ func (set *Set) Union(anotherSet *Set)  *Set{
 		unionSet.AddElement(value)
 	}
 	return unionSet
+}
+
+func main()  {
+	var set1 *Set
+	var set2 *Set
+	var set3 *Set
+
+	//Set 1
+	set1 = &Set{}
+	set1.New()
+	set1.AddElement(6)
+	set1.AddElement(9)
+	set1.AddElement(1)
+	set1.AddElement(4)
+	
+	//Set 2
+	set2 = &Set{}
+	set2.New()
+	set2.AddElement(6)
+	set2.AddElement(9)
+	set2.AddElement(1)
+	set2.AddElement(4)
+	
+	//Set 3
+	set3 = &Set{}
+	set3.New()
+	set3.AddElement(6)
+	set3.AddElement(9)
+	set3.AddElement(1)
+	set3.AddElement(4)
+	
+	//fmt.Printf("Initial format", set1)
+
 }
