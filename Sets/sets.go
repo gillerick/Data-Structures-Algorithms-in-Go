@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Set struct {
 	integerMap map[int]bool
  }
@@ -75,19 +77,19 @@ func main()  {
 	//Set 2
 	set2 = &Set{}
 	set2.New()
-	set2.AddElement(6)
-	set2.AddElement(9)
-	set2.AddElement(1)
+	set2.AddElement(3)
 	set2.AddElement(4)
+	set2.AddElement(2)
+	set2.AddElement(7)
 	
 	//Set 3
 	set3 = &Set{}
 	set3.New()
-	set3.AddElement(6)
-	set3.AddElement(9)
+	set3.AddElement(5)
 	set3.AddElement(1)
-	set3.AddElement(4)
-	
-	//fmt.Printf("Initial format", set1)
+	set3.AddElement(8)
+	set3.AddElement(9)
+	fmt.Println("Hello Sets")
+	fmt.Println(set1.ContainsElement(9))
 
 }
