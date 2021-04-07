@@ -106,7 +106,8 @@ func main()  {
 	postIDs.New()
 
 	//Testing AddElement from a range
-	ids := [8]int{23, 56, 78, 45, 67, 89, 56, 89}
+	var ids = [8]int{23, 56, 78, 45, 67, 89, 56, 89}
+
 	for _, value := range ids{
 		postIDs.AddElement(value)
 
